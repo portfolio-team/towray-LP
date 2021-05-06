@@ -1,0 +1,202 @@
+/* Reset
+============================================================================= */
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    font-weight: inherit;
+}
+
+div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+html {
+    font-size: 62.5%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+
+
+/* Main
+============================================================================= */
+/* Break Point */
+$mq-small: 520px;
+$mq-middle: 768px;
+$mq-large: 1024px;
+
+.main{
+    margin: auto;
+    @media only screen and (min-width: $mq-large + 1) {
+        max-width: 60%;
+    }
+    @media only screen and (max-width: $mq-large) {
+        max-width: 75%;
+    }
+    @media only screen and (max-width: $mq-middle) {
+        max-width: 90%;
+    }
+    @media only screen and (max-width: $mq-small) {
+        max-width: 100%;
+    }
+}
+.container{
+    margin: 5rem 0 10rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.leftColumn{
+    &__container{
+        grid-column-start: 2;
+        grid-column-end: 5;
+        position: relative;
+
+        @media only screen and (max-width: $mq-small) {
+            grid-column-start: 2;
+            grid-column-end: 5;
+        }
+    }
+    &__logo{
+        @media only screen and (min-width: $mq-large + 1) {
+            width: 123px;
+        }
+        @media only screen and (max-width: $mq-large) {
+            width: 123px;
+        }
+        @media only screen and (max-width: $mq-middle) {
+            width: 100px;
+        }
+        @media only screen and (max-width: $mq-small) {
+            width: 70px;
+        }
+    }
+    &__musicList{
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 2.0rem;
+    }
+    &__music{
+        color: #3c3d36;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.2rem;
+        margin-top: 3rem;
+        a{
+            color: #3c3d36;
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        @media only screen and (max-width: $mq-middle) {
+            font-size: 1.0rem;
+            margin-top: 2.0rem;
+        }
+        @media only screen and (max-width: $mq-small) {
+            font-size: 0.6rem;
+            margin-top: 1.5rem;
+        }
+    }
+}
+
+.rightColumn{
+    &__container{
+        grid-column-start: 6;
+        grid-column-end: 12;
+        @media only screen and (max-width: $mq-small) {
+            grid-column-start: 5;
+            grid-column-end: 12;
+        }
+    }
+    &__tworay{
+        img{
+            margin-top: 5rem;
+            width: 100%;
+            @media only screen and (max-width: $mq-middle) {
+                font-size: 4.5rem;
+            }
+            @media only screen and (max-width: $mq-small) {
+                margin-top: 4rem;
+            }
+        }
+    }
+    &__copyright{
+        font-family: 'Bodoni Moda', serif;
+        text-align: right;
+        font-size: 0.8rem;
+        @media only screen and (max-width: $mq-middle) {
+            font-size: 0.6rem;
+        }
+        @media only screen and (max-width: $mq-small) {
+            font-size: 0.1rem;
+        }
+    }
+    &__sns{
+        margin-top: 5rem;
+        display: flex;
+        justify-content: flex-end;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #cccccc;
+        @media only screen and (max-width: $mq-middle) {
+            margin-top: 3rem;
+        }
+        @media only screen and (max-width: $mq-small) {
+            margin-top: 2rem;
+        }
+
+    }
+    &__twitter{
+        img{
+            width: 35px;
+            @media only screen and (max-width: $mq-middle) {
+                width: 25px;
+            }
+            @media only screen and (max-width: $mq-small) {
+                width: 20px;
+            }
+        }
+    }
+    &__insta{
+        margin-left: 1.2rem;
+        @media only screen and (max-width: $mq-middle) {
+            margin-left: 0.6rem;
+        }
+        img{
+            width: 35px;
+            @media only screen and (max-width: $mq-middle) {
+                width: 25px;
+            }
+            @media only screen and (max-width: $mq-small) {
+                width: 20px;
+            }
+        }
+    }
+}
