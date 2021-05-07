@@ -132,12 +132,13 @@ $mq-large: 1024px;
         grid-column-start: 12;
         grid-column-end: 23;
         @media only screen and (max-width: $mq-small) {
-            grid-column-start: 12;
+            grid-column-start: 10;
             grid-column-end: 24;
         }
     }
     &__tworay{
         img{
+            user-select:none;
             margin-top: 5rem;
             width: 100%;
             @media only screen and (max-width: $mq-middle) {
