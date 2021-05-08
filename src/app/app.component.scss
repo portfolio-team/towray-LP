@@ -151,6 +151,8 @@ $mq-large: 1024px;
     }
     &__tworay{
         img{
+            transition: opacity 1s;
+            opacity: 0;
             user-select:none;
             margin-top: 5rem;
             width: 100%;
@@ -160,6 +162,9 @@ $mq-large: 1024px;
             @media only screen and (max-width: $mq-small) {
                 margin-top: 4rem;
             }
+        }
+        img.ng-lazyloaded {
+            opacity: 1;
         }
     }
     &__copyright{
