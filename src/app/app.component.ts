@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'tworay-lp';
+  defaultImage = '../assets/blur-tworay.jpg';
+  image = '../assets/tworay.jpg';
 }
