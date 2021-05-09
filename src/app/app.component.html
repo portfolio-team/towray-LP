@@ -45,7 +45,8 @@
     <!-- rightColumn -->
     <div class="rightColumn__container">
       <div class="rightColumn__tworay">
-        <img src="../assets/tworay.jpg" oncontextmenu="return false;">
+        <img class="img-blur" src="../assets/blur-tworay.jpg" oncontextmenu="return false;"/>
+        <img class="-lazy" [lazyLoad]="image" oncontextmenu="return false;"/>
       </div>
       <p class="rightColumn__copyright">Copyright © All rights reserved.</p>
       <ul class="rightColumn__sns">
