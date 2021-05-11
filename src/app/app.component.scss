@@ -42,7 +42,17 @@ ol, ul {
     list-style: none;
 }
 
+@font-face {
+    font-family: "Bodoni Moda";
+    src: url("/assets/fonts/BodoniModa-Regular.woff2") format("woff2"),
+    url("/assets/fonts/BodoniModa-Regular.woff") format("woff");
+}
 
+@font-face {
+    font-family: "Roboto Bold";
+    src: url("/assets/fonts/Roboto-Bold.woff2") format("woff2"),
+    url("/assets/fonts/Roboto-Bold.woff") format("woff");
+}
 
 /* Main
 ============================================================================= */
@@ -118,7 +128,7 @@ $mq-large: 1024px;
     }
     &__music{
         color: #3c3d36;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Roboto Bold', sans-serif;
         font-size: 1.2rem;
         margin-top: 3rem;
         a{
